@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "pregunta": "Cual es el nombre de este jugador?",
+      "categoty": "deporte",
+      "image": "/fotos/messi.jpg",
+      "options": ["Messi", "Ronaldo", "Mascherano", "Ronaldinho"],
+      "correctAnswer": 0
+    },
+    {
+      "id": 2,
+      "pregunta": "Cual es el nombre de este jugador?",
+      "categoty": "deporte",
+      "image": "/fotos/ronaldo.jpg",
+      "options": ["Messi", "Ronaldo", "Neymar", "Ronaldinho"],
+      "correctAnswer": 1
+    },
+    {
+        "id": 3,
+        "pregunta": "Cual es el nombre de este jugador?",
+        "categoty": "deporte",
+        "image": "/fotos/lebron.jpg",
+        "options": ["Curry", "Maradona", "Lebron", "Ronaldinho"],
+        "correctAnswer": 2
+    },
+    {
+        "id": 4,
+        "pregunta": "Cual es el nombre de este jugador?",
+        "categoty": "deporte",
+        "image": "/fotos/curry.jpg",
+        "options": ["Ginobilli", "Curry", "Neymar", "Ronaldinho"],
+        "correctAnswer": 1
+    },
+    {
+        "id": 5,
+        "pregunta": "A que deporte corresponde esta pelota?",
+        "categoty": "deporte",
+        "image": "/fotos/voley.jpg",
+        "options": ["Golf", "Futbol", "Basketball", "Voley"],
+        "correctAnswer": 3
+    }
+  ]
+  
