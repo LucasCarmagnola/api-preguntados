@@ -13,12 +13,16 @@ app.use(cors());
 
 const preguntasPath = path.join(__dirname, 'public', 'preguntas.json');
 
-// Ruta para obtener una pregunta
+app.get('', (req:Request, res:Response) => {
+
+    res.json("api-preguntados");
+});
+
+
 app.get('/pregunta', (req:Request, res:Response) => {
-    // Leer archivo JSON
+    
     const preguntas = JSON.parse(fs.readFileSync(preguntasPath, 'utf8'));
 
-    // Seleccionar una pregunta aleatoria
     const preguntaAleatoria = preguntas[Math.floor(Math.random() * preguntas.length)];
     res.json(preguntaAleatoria);
 });
