@@ -9,20 +9,21 @@ const app = express();
 const puerto = process.env.PORT || 7999;
 
 app.use(express.json());
+app.use(cors);
 
-const allowedOrigins = ['http://localhost:4200', 'https://sala-de-juegos-carmagola-lucas.web.app/', 'https://sala-de-juegos-carmagola-lucas.firebaseapp.com/'];
+// const allowedOrigins = ['http://localhost:4200', 'https://sala-de-juegos-carmagola-lucas.web.app/', 'https://sala-de-juegos-carmagola-lucas.firebaseapp.com/'];
 
-app.use(cors({
-    origin: function(origin:any, callback:any) {
-        // Permitir solicitudes sin origen (como curl o Postman)
-        if (!origin) return callback(null, true);
-        if (allowedOrigins.indexOf(origin) === -1) {
-            const msg = 'El origen ' + origin + ' no está permitido';
-            return callback(new Error(msg), false);
-        }
-        return callback(null, true);
-    }
-}));
+// app.use(cors({
+//     origin: function(origin:any, callback:any) {
+//         // Permitir solicitudes sin origen (como curl o Postman)
+//         if (!origin) return callback(null, true);
+//         if (allowedOrigins.indexOf(origin) === -1) {
+//             const msg = 'El origen ' + origin + ' no está permitido';
+//             return callback(new Error(msg), false);
+//         }
+//         return callback(null, true);
+//     }
+// }));
 
 const preguntasPath = path.join(__dirname, 'public', 'preguntas.json');
 
