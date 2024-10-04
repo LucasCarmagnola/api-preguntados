@@ -5,35 +5,55 @@ const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-const puerto = 7999;
+const puerto = process.env.PORT || 7999;
 app.use(express.json());
-app.use(cors());
+app.use(cors);
 const preguntasPath = path.join(__dirname, 'public', 'preguntas.json');
-// Ruta para obtener una pregunta
+app.get('/', (req, res) => {
+    res.json({
+        message: "Bienvenido a la API de Preguntados",
+        description: "Esta API proporciona preguntas aleatorias sobre diferentes categorías (deportes, famosos, entre otras) para juegos de preguntas y respuestas.",
+        routes: [
+            {
+                method: "GET",
+                endpoint: "/pregunta",
+                description: "Obtén una pregunta aleatoria de cualquier categoría."
+            },
+            {
+                method: "GET",
+                endpoint: "/pregunta?categoria=[categoria]",
+                description: "Obtén una pregunta aleatoria filtrada por categoría. Reemplaza [categoria] por la categoría deseada (por ejemplo, 'deporte' o 'famosos').",
+                example: "/pregunta?categoria=deporte"
+            }
+        ],
+        parameters: {
+            query: {
+                categoria: "Opcional. Filtra las preguntas por una categoría específica. Valores posibles: 'deporte', 'famosos', etc."
+            }
+        },
+        example: {
+            request: "GET /pregunta?categoria=famosos",
+            response: {
+                id: 6,
+                pregunta: "¿Quién es este famoso?",
+                category: "famosos",
+                image: "/fotos/vin_diesel.jpg",
+                options: ["Vin Diesel", "Dwayne Johnson", "Tom Holland", "Robert Downey Jr."],
+                correctAnswer: 0
+            }
+        },
+        note: "Si no se especifica una categoría, la API devolverá una pregunta de cualquier categoría al azar."
+    });
+});
 app.get('/pregunta', (req, res) => {
-    // Leer archivo JSON
+    const categoria = req.query.categoria;
     const preguntas = JSON.parse(fs.readFileSync(preguntasPath, 'utf8'));
-    // Seleccionar una pregunta aleatoria
-    const preguntaAleatoria = preguntas[Math.floor(Math.random() * preguntas.length)];
+    const preguntasFiltradas = categoria
+        ? preguntas.filter((p) => p.category === categoria)
+        : preguntas;
+    const preguntaAleatoria = preguntasFiltradas[Math.floor(Math.random() * preguntasFiltradas.length)];
     res.json(preguntaAleatoria);
 });
-// Ruta para validar la respuesta
-// app.post('/validar-respuesta', (req, res) => {
-//     const { id, respuestaSeleccionada } = req.body;
-//     // Leer archivo JSON
-//     const preguntas = JSON.parse(fs.readFileSync('preguntas.json', 'utf8'));
-//     // Encontrar la pregunta por ID
-//     const pregunta = preguntas.find(p => p.id === id);
-//     if (!pregunta) {
-//         return res.status(404).json({ mensaje: "Pregunta no encontrada" });
-//     }
-//     // Verificar si la respuesta es correcta
-//     if (pregunta.correctAnswer === respuestaSeleccionada) {
-//         res.json({ correcto: true, mensaje: "¡Respuesta correcta!" });
-//     } else {
-//         res.json({ correcto: false, mensaje: "Respuesta incorrecta" });
-//     }
-// });
 // Servir las imágenes estáticas desde la carpeta "public"
 app.use('/fotos', express.static(path.join(__dirname, 'public/fotos')));
 app.listen(puerto, () => {
