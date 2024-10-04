@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 const puerto = process.env.PORT || 7999;
 app.use(express.json());
-app.use(cors);
+app.use(cors());
 const preguntasPath = path.join(__dirname, 'public', 'preguntas.json');
 app.get('/', (req, res) => {
     res.json({
