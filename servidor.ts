@@ -16,7 +16,7 @@ app.use(cors);
 
 const preguntasPath = path.join(__dirname, 'public', 'preguntas.json');
 
-app.get('', (req: Request, res: Response) => {
+app.get('/', (req: Request, res: Response) => {
     res.json({
         message: "Bienvenido a la API de Preguntados",
         description: "Esta API proporciona preguntas aleatorias sobre diferentes categorías (deportes, famosos, entre otras) para juegos de preguntas y respuestas.",
