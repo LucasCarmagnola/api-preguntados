@@ -99,7 +99,7 @@
     "id": 13,
     "pregunta": "Cual es el nombre de esta famosa?",
     "category": "famosos",
-    "image": "/fotos/scarlett_johansson.jpg",
+    "image": "/fotos/scarlett.jpg",
     "options": ["Jennifer Aniston", "Scarlett Johansson", "Rihanna", "Tom Holland"],
     "correctAnswer": 1
   }
