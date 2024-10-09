@@ -44,7 +44,7 @@
     "pregunta": "Cual es el nombre de este famoso?",
     "category": "famosos",
     "image": "/fotos/vin_diesel.jpg",
-    "options": ["Vin Diesel", "Tom Holland", "Robert Downey Jr.", "Adam Sandler"],
+    "options": ["Vin Diesel", "Dwayne Johnson", "Morgan Freeman", "Will Smith"],
     "correctAnswer": 0
   },
   {
@@ -52,7 +52,7 @@
     "pregunta": "Cual es el nombre de esta famosa?",
     "category": "famosos",
     "image": "/fotos/jennifer_aniston.jpg",
-    "options": ["Jennifer Aniston", "Scarlett Johansson", "Rihanna", "Zac Efron"],
+    "options": ["Jennifer Aniston", "Anne Hathaway", "Julia Roberts", "Angelina Jolie"],
     "correctAnswer": 0
   },
   {
@@ -60,7 +60,7 @@
     "pregunta": "Cual es el nombre de este famoso?",
     "category": "famosos",
     "image": "/fotos/zac_efron.jpg",
-    "options": ["Vin Diesel", "Robert Downey Jr.", "Zac Efron", "Adam Sandler"],
+    "options": ["Robert De Niro", "Tom Hanks", "Zac Efron", "Johnny Depp"],
     "correctAnswer": 2
   },
   {
@@ -68,7 +68,7 @@
     "pregunta": "Cual es el nombre de este famoso?",
     "category": "famosos",
     "image": "/fotos/robert_downey_jr.jpg",
-    "options": ["Tom Holland", "Robert Downey Jr.", "Zac Efron", "Vin Diesel"],
+    "options": ["Matt Damon", "Robert Downey Jr.", "Silvester Stalone", "Jason Statham"],
     "correctAnswer": 1
   },
   {
@@ -76,7 +76,7 @@
     "pregunta": "Cual es el nombre de esta famosa?",
     "category": "famosos",
     "image": "/fotos/rihanna.jpg",
-    "options": ["Rihanna", "Jennifer Aniston", "Scarlett Johansson", "Rihanna"],
+    "options": ["Rihanna", "Margot Robbie", "Jennifer Lawrence", "Lady Gaga"],
     "correctAnswer": 0
   },
   {
@@ -84,7 +84,7 @@
     "pregunta": "Cual es el nombre de este famoso?",
     "category": "famosos",
     "image": "/fotos/adam_sandler.jpg",
-    "options": ["Adam Sandler", "Robert Downey Jr.", "Tom Holland", "Vin Diesel"],
+    "options": ["Adam Sandler", "Jason Mamoa", "Tom Cruise", "Keanu Reeves"],
     "correctAnswer": 0
   },
   {
@@ -92,7 +92,7 @@
     "pregunta": "Cual es el nombre de este famoso?",
     "category": "famosos",
     "image": "/fotos/tom_holland.jpg",
-    "options": ["Zac Efron", "Vin Diesel", "Tom Holland", "Adam Sandler"],
+    "options": ["Zac Efron", "Bradley Cooper", "Tom Holland", "Chris Evans"],
     "correctAnswer": 2
   },
   {
@@ -100,7 +100,7 @@
     "pregunta": "Cual es el nombre de esta famosa?",
     "category": "famosos",
     "image": "/fotos/scarlett.jpg",
-    "options": ["Jennifer Aniston", "Scarlett Johansson", "Rihanna", "Tom Holland"],
+    "options": ["Meryl Streep", "Scarlett Johansson", "Dakota Johnson", "Emma Stone"],
     "correctAnswer": 1
   }
 ]
