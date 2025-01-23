@@ -8,12 +8,11 @@ const app = express();
 const puerto = process.env.PORT || 7999;
 app.use(express.json());
 app.use(cors());
-const preguntasPath = path.join(__dirname, 'public', 'preguntas.json');
-const rootPath = __dirname;
-app.use(express.static(rootPath));
+app.use(express.static(__dirname));
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
+const preguntasPath = path.join(__dirname, 'public', 'preguntas.json');
 app.get('/api/pregunta', (req, res) => {
     const categoria = req.query.categoria;
     const preguntas = JSON.parse(fs.readFileSync(preguntasPath, 'utf8'));

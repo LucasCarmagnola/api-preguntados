@@ -12,18 +12,17 @@ app.use(express.json());
 app.use(cors());
 
 
+app.use(express.static(__dirname));
+
+
+app.get('/', (req: Request, res: Response) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+
 
 
 const preguntasPath = path.join(__dirname, 'public', 'preguntas.json');
-const rootPath = __dirname;
-
-app.use(express.static(rootPath));
-
-app.get('/', (req: Request, res: Response) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-  });
-  
-
 app.get('/api/pregunta', (req:Request, res:Response) => {
 
     const categoria = req.query.categoria
