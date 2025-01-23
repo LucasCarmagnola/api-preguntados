@@ -8,12 +8,12 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/api/(.*)", 
       "dest": "/servidor.js"
     },
     {
-      "src": "/styles.css",
-      "dest": "/styles.css"
+      "src": "/(.*\\.(css|js|html|png|jpg|jpeg|gif|ico|svg|webp))",
+      "dest": "/$1"
     },
     {
       "src": "/(.*)",
