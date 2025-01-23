@@ -12,11 +12,15 @@ app.use(express.json());
 app.use(cors());
 
 
-app.use(express.static(__dirname));
+//app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'public')));
 
+// app.get('/', (req: Request, res: Response) => {
+//     res.sendFile(path.join(__dirname, 'index.html'));
+// });
 
 app.get('/', (req: Request, res: Response) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 
