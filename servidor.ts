@@ -16,6 +16,8 @@ app.use(cors());
 
 const preguntasPath = path.join(__dirname, 'public', 'preguntas.json');
 
+app.use(express.static(path.join(__dirname)));
+
 
 app.get('/api/pregunta', (req:Request, res:Response) => {
 

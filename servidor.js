@@ -9,6 +9,7 @@ const puerto = process.env.PORT || 7999;
 app.use(express.json());
 app.use(cors());
 const preguntasPath = path.join(__dirname, 'public', 'preguntas.json');
+app.use(express.static(path.join(__dirname)));
 app.get('/api/pregunta', (req, res) => {
     const categoria = req.query.categoria;
     const preguntas = JSON.parse(fs.readFileSync(preguntasPath, 'utf8'));
