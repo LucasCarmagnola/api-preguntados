@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación de la API de Preguntados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido a la API de Preguntados</h1>
+        <p>Esta API proporciona preguntas aleatorias sobre diferentes categorías (deportes, famosos, entre otras) para juegos de preguntas y respuestas.</p>
+
+        <h2>Rutas</h2>
+        <div class="routes">
+            <div class="route">
+                <h3>GET /pregunta</h3>
+                <p>Obtén una pregunta aleatoria de cualquier categoría.</p>
+            </div>
+            <div class="route">
+                <h3>GET /pregunta?categoria=[categoria]</h3>
+                <p>Obtén una pregunta aleatoria filtrada por categoría. Reemplaza <code>[categoria]</code> por la categoría deseada (por ejemplo, <code>'deporte'</code> o <code>'famosos'</code>).</p>
+                <p><strong>Ejemplo:</strong> <code>/pregunta?categoria=deporte</code></p>
+            </div>
+        </div>
+
+        <h2>Parámetros</h2>
+        <div class="parameters">
+            <h3>Query</h3>
+            <ul>
+                <li><strong>categoria:</strong> Opcional. Filtra las preguntas por una categoría específica. Valores posibles: <code>'deporte'</code>, <code>'famosos'</code>, etc.</li>
+            </ul>
+        </div>
+
+        <h2>Ejemplo</h2>
+        <div class="example">
+            <h3>Solicitud</h3>
+            <p><code>GET /pregunta?categoria=famosos</code></p>
+
+            <h3>Respuesta</h3>
+            <pre>{
+  "id": 6,
+  "pregunta": "¿Quién es este famoso?",
+  "category": "famosos",
+  "image": "/fotos/vin_diesel.jpg",
+  "options": [
+    "Vin Diesel",
+    "Dwayne Johnson",
+    "Tom Holland",
+    "Robert Downey Jr."
+  ],
+  "correctAnswer": 0
+}</pre>
+        </div>
+
+        <p class="note"><strong>Nota:</strong> Si no se especifica una categoría, la API devolverá una pregunta de cualquier categoría al azar.</p>
+    </div>
+</body>
+</html>

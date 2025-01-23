@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f5e9;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+h2 {
+    color: #34495e;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #555;
+}
+
+p {
+    margin: 10px 0;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+code {
+    background-color: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.routes, .parameters, .example {
+    margin: 20px 0;
+}
+
+.route {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fcfcfc;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.note {
+    font-style: italic;
+    background-color: #fff8dc;
+    padding: 10px;
+    border-left: 4px solid #ffeb3b;
+    border-radius: 4px;
+}
