@@ -19,6 +19,10 @@ const rootPath = __dirname;
 
 app.use(express.static(rootPath));
 
+app.get('/', (req: Request, res: Response) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  });
+  
 
 app.get('/api/pregunta', (req:Request, res:Response) => {
 
