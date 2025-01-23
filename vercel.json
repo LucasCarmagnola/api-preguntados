@@ -12,12 +12,9 @@
       "dest": "/servidor.js"
     },
     {
-      "src": "/(.*\\.(css|js|html|png|jpg|jpeg|gif|ico|svg|webp))",
+      "src": "/(.*)", 
       "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
     }
   ]
 }
+
