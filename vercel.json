@@ -4,20 +4,16 @@
     {
       "src": "servidor.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "styles.css",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "/servidor.js"
+    },
+    {
+      "src": "/styles.css",
+      "dest": "/styles.css"
     },
     {
       "src": "/(.*)",
