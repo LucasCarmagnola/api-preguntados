@@ -1,15 +1,27 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "servidor.js", 
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/servidor.js"
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "servidor.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "styles.css",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/servidor.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
