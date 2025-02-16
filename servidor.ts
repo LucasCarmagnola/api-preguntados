@@ -27,6 +27,11 @@ app.get('/', (req: Request, res: Response) => {
 
 
 const preguntasPath = path.join(__dirname, 'public', 'preguntas.json'); 
+
+app.get('/api/test', (req: Request, res: Response) => {
+    res.json({ message: 'Test endpoint works!' });
+});
+
 app.get('/api/pregunta', (req:Request, res:Response) => {
 
     const categoria = req.query.categoria

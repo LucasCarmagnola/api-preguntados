@@ -17,6 +17,9 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 const preguntasPath = path.join(__dirname, 'public', 'preguntas.json');
+app.get('/api/test', (req, res) => {
+    res.json({ message: 'Test endpoint works!' });
+});
 app.get('/api/pregunta', (req, res) => {
     const categoria = req.query.categoria;
     const preguntas = JSON.parse(fs.readFileSync(preguntasPath, 'utf8'));
