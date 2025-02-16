@@ -26,7 +26,7 @@ app.get('/', (req: Request, res: Response) => {
 
 
 
-const preguntasPath = path.join(__dirname, 'public', 'preguntas.json');
+const preguntasPath = path.join(__dirname, 'public', 'preguntas.json'); 
 app.get('/api/pregunta', (req:Request, res:Response) => {
 
     const categoria = req.query.categoria

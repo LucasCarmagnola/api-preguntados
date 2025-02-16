@@ -2,12 +2,13 @@
   "version": 2,
   "routes": [
     {
-      "src": "/api/pregunta", 
+      "src": "/api/(.*)", 
       "dest": "/servidor.js"
     },
     {
       "src": "/(.*)", 
-      "dest": "/public/$1"
+      "dest": "/public/$1",
+      "continue": true
     }
   ]
 }
